@@ -1,0 +1,91 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 30px;
+    background-color: #f5f5f5;
+  }
+  
+  h2, h3 {
+    color: #333;
+    margin-top: 40px;
+  }
+  
+  /* Form styles */
+  form {
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+  }
+  
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  #logoff {
+    background-color: #AF1C50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Inventory list styles */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  li:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  li form {
+    display: inline-block;
+    margin-left: 15px;
+  }
+  
+  .item-name {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .item-description {
+    color: #666;
+  }
+  
+  .item-quantity {
+    color: #4CAF50;
+    font-weight: bold;
+  }

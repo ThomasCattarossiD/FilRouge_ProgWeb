@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventaire</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/inventaire.css') }}">
+</head>
+<body>
+    <h2>Inventaire de {{ session['username'] }}</h2>
+    <a href="{{ url_for('logout') }}"><button id="logoff">Se déconnecter</button></a>
+    
+    <h3>Ajouter un objet</h3>
+    <form method="POST" action="{{ url_for('ajouter_objet') }}">
+        <input type="text" name="objet_nom" placeholder="Nom de l'objet" required><br>
+        <input type="text" name="description" placeholder="Description de l'objet"><br>
+        <input type="number" name="quantite" placeholder="Quantité" required><br>
+        <button type="submit">Ajouter</button>
+    </form>
+
+    <h3>Liste des objets</h3>
+    <ul>
+        {% for item in inventaire_items %}
+            <li>{{ item['nom'] }} ({{ item['description'] }}), Quantité: {{ item['quantite'] }}
+                <form method="POST" action="{{ url_for('mettre_a_jour_objet', objet_id=item['objet_id']) }}">
+                    <input type="number" name="quantite" placeholder="Nouvelle quantité" required>
+                    <button type="submit">Mettre à jour</button>
+                </form>
+                <form method="POST" action="{{ url_for('supprimer_objet', objet_id=item['objet_id']) }}">
+                    <button type="submit">Supprimer</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

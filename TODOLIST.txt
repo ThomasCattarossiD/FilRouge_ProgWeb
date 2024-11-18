@@ -1,0 +1,2 @@
+- Corriger le CSS de login / register
+- Rédaction du README.MD
