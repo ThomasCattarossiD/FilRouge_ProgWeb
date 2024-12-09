@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style/login.css') }}">
 </head>
 <body>
-    <h2>Connexion</h2>
-    <form method="POST">
+    <h2 class="container">Connexion</h2>
+    <form method="POST" class="container">
         <input type="text" name="identifier" placeholder="Nom d'utilisateur ou email" required><br>
         <input type="password" name="password" placeholder="Mot de passe" required><br>
         <button type="submit">Se connecter</button>
     </form>
-    <p>Pas encore inscrit ? <a href="{{ url_for('register') }}">Créer un compte</a></p>
+    <p class="container">Pas encore inscrit ? <a href="{{ url_for('register') }}">Créer un compte</a></p>
 </body>
 </html>

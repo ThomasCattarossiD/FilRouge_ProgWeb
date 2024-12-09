@@ -62,3 +62,9 @@ body {
   a:hover {
     color: #45a049;
   }
+
+  .container {
+    justify-content: center; /* Centrer horizontalement (optionnel) */
+    align-items: center;    /* Centrer verticalement */
+    height: 200px;          /* Nécessaire pour définir un espace vertical */
+  }
